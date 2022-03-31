@@ -31,3 +31,11 @@ class RegisterScreen extends StatelessWidget {
                 decoration: InputDecoration(labelText: "Họ và tên"),
               ),
             ),
+            SizedBox(height: size.height * 0.03),
+            Container(
+              alignment: Alignment.center,
+              margin: EdgeInsets.symmetric(horizontal: 40),
+              child: TextField(
+                decoration: InputDecoration(labelText: "Số điện thoại"),
+              ),
+            ),
