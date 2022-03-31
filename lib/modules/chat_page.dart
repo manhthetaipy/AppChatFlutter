@@ -1,5 +1,5 @@
-import 'package:chat_app/components/chat.dart';
-import 'package:chat_app/models/chat_users.dart';
+import 'package:app/components/chat.dart';
+import 'package:app/models/chat_users.dart';
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatefulWidget {
