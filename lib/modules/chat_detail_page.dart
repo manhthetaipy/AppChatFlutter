@@ -39,3 +39,82 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
     SendMenuItems(
         text: "Danh thiếp", icons: Icons.person, color: Colors.purple),
   ];
+void showModal() {
+    showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return Container(
+            height: MediaQuery.of(context).size.height / 2,
+            color: Color(0xff737373),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20),
+                    topLeft: Radius.circular(20)),
+              ),
+              child: Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Center(
+                    child: Container(
+                      height: 4,
+                      width: 50,
+                      color: Colors.grey.shade200,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  ListView.builder(
+                    itemCount: menuItems.length,
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, index) {
+                      return Container(
+                        padding: EdgeInsets.only(top: 10, bottom: 10),
+                        child: ListTile(
+                          leading: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                              color: menuItems[index].color.shade50,
+                            ),
+                            height: 50,
+                            width: 50,
+                            child: Icon(
+                              menuItems[index].icons,
+                              size: 20,
+                              color: menuItems[index].color.shade400,
+                            ),
+                          ),
+                          title: Text(menuItems[index].text),
+                        ),
+                      );
+                    },
+                  )
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: ChatDetailPageAppBar(),
+      body: Stack(
+        children: <Widget>[
+          ListView.builder(
+            itemCount: chatMessage.length,
+            shrinkWrap: true,
+            padding: EdgeInsets.only(top: 10, bottom: 10),
+            physics: NeverScrollableScrollPhysics(),
+            itemBuilder: (context, index) {
+              return ChatBubble(
+                chatMessage: chatMessage[index],
+              );
+            },
+          ),
