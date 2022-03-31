@@ -14,3 +14,9 @@ class LoginScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               padding: EdgeInsets.symmetric(horizontal: 40),
               child: Text(
+                   "iTinder - Kết nối tình bạn!",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.pink,
+                    fontSize: 36),
+                textAlign: TextAlign.left,
