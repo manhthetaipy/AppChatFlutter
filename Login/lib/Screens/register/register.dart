@@ -83,3 +83,26 @@ class RegisterScreen extends StatelessWidget {
                 ),
               ),
             ),
+            Container(
+              alignment: Alignment.centerRight,
+              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+              child: GestureDetector(
+                onTap: () => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()))
+                },
+                child: Text(
+                  "Bạn đã có tài khoản, đăng nhập ngay",
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF2661FA)),
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
