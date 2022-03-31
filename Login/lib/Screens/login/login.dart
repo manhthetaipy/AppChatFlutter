@@ -40,3 +40,9 @@ class LoginScreen extends StatelessWidget {
                 obscureText: true,
               ),
             ),
+              SizedBox(height: size.height * 0.05),
+            Container(
+              alignment: Alignment.centerRight,
+              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+              child: RaisedButton(
+                onPressed: () {},
