@@ -1,5 +1,5 @@
-import 'package:chat_app/models/chat_message.dart';
-import 'package:chat_app/modules/chat_detail_page.dart';
+import 'package:app/models/chat_message.dart';
+import 'package:app/modules/chat_detail_page.dart';
 import 'package:flutter/material.dart';
 
 class ChatBubble extends StatefulWidget {
