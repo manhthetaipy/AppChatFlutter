@@ -56,3 +56,30 @@ class RegisterScreen extends StatelessWidget {
                 obscureText: true,
               ),
             ),
+            SizedBox(height: size.height * 0.05),
+            Container(
+              alignment: Alignment.centerRight,
+              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+              child: RaisedButton(
+                onPressed: () {},
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(80.0)),
+                textColor: Colors.white,
+                padding: const EdgeInsets.all(0),
+                child: Container(
+                  alignment: Alignment.center,
+                  height: 50.0,
+                  width: size.width * 0.5,
+                  decoration: new BoxDecoration(
+                    color: Colors.pink,
+                    borderRadius: BorderRadius.circular(80.0),
+                  ),
+                  padding: const EdgeInsets.all(0),
+                  child: Text(
+                    "Đăng ký ngay",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
