@@ -34,3 +34,9 @@ class LoginScreen extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               margin: EdgeInsets.symmetric(horizontal: 40),
+              
+              child: TextField(
+                decoration: InputDecoration(labelText: "Mật khẩu"),
+                obscureText: true,
+              ),
+            ),
