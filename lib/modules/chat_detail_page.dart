@@ -1,7 +1,7 @@
-import 'package:chat_app/components/chat_bubble.dart';
-import 'package:chat_app/components/chat_detail_page_appbar.dart';
-import 'package:chat_app/models/chat_message.dart';
-import 'package:chat_app/models/send_menu_items.dart';
+import 'package:app/components/chat_bubble.dart';
+import 'package:app/components/chat_detail_page_appbar.dart';
+import 'package:app/models/chat_message.dart';
+import 'package:app/models/send_menu_items.dart';
 import 'package:flutter/material.dart';
 
 enum MessageType {
@@ -39,7 +39,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
     SendMenuItems(
         text: "Danh thiếp", icons: Icons.person, color: Colors.purple),
   ];
-void showModal() {
+  void showModal() {
     showModalBottomSheet(
         context: context,
         builder: (context) {
@@ -118,7 +118,7 @@ void showModal() {
               );
             },
           ),
-             Align(
+          Align(
             alignment: Alignment.bottomLeft,
             child: Container(
               padding: EdgeInsets.only(left: 16, bottom: 10),
@@ -160,3 +160,23 @@ void showModal() {
               ),
             ),
           ),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Container(
+              padding: EdgeInsets.only(right: 30, bottom: 50),
+              child: FloatingActionButton(
+                onPressed: () {},
+                child: Icon(
+                  Icons.send,
+                  color: Colors.white,
+                ),
+                backgroundColor: Colors.red,
+                elevation: 0,
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
