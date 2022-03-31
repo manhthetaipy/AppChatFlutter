@@ -23,4 +23,10 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xFF2661FA),
         scaffoldBackgroundColor: Colors.white,
         visualDensity: 
+VisualDensity.adaptivePlatformDensity,
+      ),
+      home: LoginScreen(),
+    );
+  }
+}
   
