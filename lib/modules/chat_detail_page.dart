@@ -118,3 +118,45 @@ void showModal() {
               );
             },
           ),
+             Align(
+            alignment: Alignment.bottomLeft,
+            child: Container(
+              padding: EdgeInsets.only(left: 16, bottom: 10),
+              height: 80,
+              width: double.infinity,
+              color: Colors.white,
+              child: Row(
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: () {
+                      showModal();
+                    },
+                    child: Container(
+                      height: 40,
+                      width: 40,
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.white,
+                        size: 21,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                          hintText: "Nhập tin nhắn.....",
+                          hintStyle: TextStyle(color: Colors.green.shade500),
+                          border: InputBorder.none),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
