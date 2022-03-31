@@ -1,6 +1,5 @@
 import 'package:chat_app/components/chat.dart';
 import 'package:chat_app/models/chat_users.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatefulWidget {
@@ -14,7 +13,17 @@ class _ChatPageState extends State<ChatPage> {
         text: "Mạnh Thế Tài",
         secondaryText: "Toi la sinh vien nam 3",
         image: "images/userImage1.jpg",
-        time: "Đang hoạt động")
+        time: "Đang hoạt động"),
+    ChatUsers(
+        text: "Nguyễn Quang Tươi",
+        secondaryText: "Tôi là Tươi",
+        image: "images/userImage2.jpg",
+        time: "1p trước"),
+    ChatUsers(
+        text: "Nam Hoài Nguyễn",
+        secondaryText: "Nam Bịp",
+        image: "images/userImage4.jpg",
+        time: "10p trước"),
   ];
   @override
   Widget build(BuildContext context) {
@@ -31,9 +40,11 @@ class _ChatPageState extends State<ChatPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
-                      "Chats",
-                      style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                      "iTinder",
+                      style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.pink,
+                          fontWeight: FontWeight.bold),
                     ),
                     Container(
                       padding:
@@ -41,20 +52,20 @@ class _ChatPageState extends State<ChatPage> {
                       height: 30,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.pink[50],
+                        color: Colors.green[50],
                       ),
                       child: Row(
                         children: <Widget>[
                           Icon(
                             Icons.add,
-                            color: Colors.pink,
+                            color: Colors.green,
                             size: 20,
                           ),
                           SizedBox(
                             width: 2,
                           ),
                           Text(
-                            "New",
+                            "Tin nhắn mới",
                             style: TextStyle(
                                 fontSize: 14, fontWeight: FontWeight.bold),
                           ),
@@ -69,7 +80,7 @@ class _ChatPageState extends State<ChatPage> {
               padding: EdgeInsets.only(top: 16, left: 16, right: 16),
               child: TextField(
                 decoration: InputDecoration(
-                  hintText: "Search...",
+                  hintText: "Tìm bạn hẹn hò...",
                   hintStyle: TextStyle(color: Colors.grey.shade400),
                   prefixIcon: Icon(
                     Icons.search,
