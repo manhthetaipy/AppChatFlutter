@@ -58,3 +58,37 @@ class LoginScreen extends StatelessWidget {
                     color: Colors.pink,
                     borderRadius: BorderRadius.circular(80.0),
                   ),
+                    padding: const EdgeInsets.all(0),
+                  child: Text(
+                    "Đăng nhập",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              alignment: Alignment.centerRight,
+              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+              child: GestureDetector(
+                onTap: () => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => RegisterScreen()))
+                },
+                child: Text(
+                  "Bạn chưa có tài khoản?",
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red),
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+                    
