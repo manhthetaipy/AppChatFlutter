@@ -46,3 +46,8 @@ class LoginScreen extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
               child: RaisedButton(
                 onPressed: () {},
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(80.0)),
+                textColor: Colors.white,
+                padding: const EdgeInsets.all(0),
+                child: Container(
