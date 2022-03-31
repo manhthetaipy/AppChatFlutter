@@ -6,3 +6,20 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+ return Scaffold(
+      body: Background(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              alignment: Alignment.centerLeft,
+              padding: EdgeInsets.symmetric(horizontal: 40),
+              child: Text(
+                "Tạo tài khoản cùng iTinder",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.pink,
+                    fontSize: 36),
+                textAlign: TextAlign.left,
+              ),
+            ),
